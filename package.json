@@ -16,7 +16,7 @@
     "typecheck": "tsc",
     "verify": "npm run typecheck && npm run lint && npm run format-verify",
     "test": "playwright test",
-    "extract:i18n": "formatjs extract '{pages,components,containers}/**/*.{js,ts,tsx}' --ignore='**/*.d.ts' --out-file lang/extracted/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format formatter.js",
+    "extract:i18n": "formatjs extract '{pages,components}/**/*.{js,ts,tsx}' --ignore='**/*.d.ts' --out-file lang/extracted/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format formatter.js",
     "compile:i18n": "formatjs compile-folder --ast lang/extracted lang/compiled --format formatter.js",
     "i18n": "npm run extract:i18n && npm run compile:i18n"
   },
