@@ -1,0 +1,40 @@
+[
+    {
+        "id":1,
+        "title":"Temp1",
+        "submenus":[
+            {
+                "id":2,
+                "title":"Temp1-First Page",
+                "submenus":[],
+                "path":"/temp1-first-page"
+            },
+            {
+                "id":3,
+                "title":"Temp1-Second Page",
+                "submenus":[
+                    {
+                        "id":1,
+                        "title":"Temp1-First Page",
+                        "submenus":[],
+                        "path":"/temp1-first-page"
+                    },
+                    {
+                        "id":2,
+                        "title":"Temp1-First Page",
+                        "submenus":[],
+                        "path":"/temp1-first-page"
+                    }
+                ],
+                "path":""
+            }
+        ],
+        "path":""
+    },
+    {
+        "id":4,
+        "title":"Temp2",
+        "submenus":[],
+        "path":"/temp2"
+    }
+]

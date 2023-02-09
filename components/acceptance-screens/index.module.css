@@ -1,0 +1,11 @@
+.formContainer {
+  @apply tw-p-8 tw-mx-auto tw-w-full;
+}
+
+.formContainer input::placeholder {
+  @apply tw-italic tw-opacity-30;
+}
+
+.formContainer button{
+  @apply tw-w-full tw-mt-2 tw-bg-transparent tw-text-blue-700 tw-border-blue-600 disabled:tw-border-blue-600 disabled:tw-bg-transparent disabled:tw-text-blue-700 disabled:tw-opacity-60;
+}

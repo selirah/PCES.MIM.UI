@@ -1,0 +1,7 @@
+.formContainer {
+    @apply p-8 mx-auto w-1/2;
+}
+
+.formContainer input::placeholder {
+    @apply italic opacity-30;
+}
