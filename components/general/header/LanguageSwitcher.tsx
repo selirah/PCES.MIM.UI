@@ -2,28 +2,28 @@ import React, { Fragment, useContext, useState } from 'react';
 import Image from 'next/image';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-import { LocaleContext } from 'contexts/i18n';
+import { LangTypes, LocaleContext } from 'contexts/i18n';
 
 const LanguageSwitcher = () => {
   const obj = {
     en: 'English',
     mk: 'Macedonian',
   };
-  const { locale, switchLanguage } = useContext(LocaleContext);
-  console.log(locale);
-  const [ln, setLn] = useState(obj[locale ? locale : 'en']);
 
-  const onSwitchLanguage = (lang: 'en' | 'mk') => {
+  const { locale, switchLanguage } = useContext(LocaleContext);
+  const [lang, setLang] = useState<LangTypes>(locale);
+
+  const onSwitchLanguage = (lang: LangTypes) => {
     localStorage.setItem('lang', lang);
     switchLanguage(lang);
-    setLn(obj[lang]);
+    setLang(lang);
   };
 
   return (
     <Menu as="div" className="relative inline-block text-left mt-1">
       <div>
         <Menu.Button className="inline-flex flex-row items-center justify-center w-full px-4 py-2 text-sm uppercase font-play font-bold text-blue-800">
-          <span className="ml-2">{ln}</span>
+          <span className="ml-2">{obj[lang]}</span>
           <ChevronDownIcon
             className="w-5 h-5 ml-2 -mr-1 text-white hover:text-violet-100"
             aria-hidden="true"
